@@ -1,0 +1,1368 @@
+/* ==========================================================
+   PREMIUM WEDDING DESIGN
+   Version 1.0
+========================================================== */
+
+/* ---------- Paper Texture ---------- */
+
+body{
+
+    position:relative;
+
+    background:
+        radial-gradient(circle at top,
+        rgba(255,255,255,.45),
+        transparent 45%),
+
+        linear-gradient(
+        180deg,
+        #F7F4ED,
+        #F2EFE8);
+
+}
+
+/* бумажная текстура */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.035;
+
+    background-image:
+
+        radial-gradient(circle, #000 0.6px, transparent 0.7px);
+
+    background-size:14px 14px;
+
+    z-index:-1;
+
+}
+
+/* теплое освещение */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+
+    radial-gradient(circle at 50% -20%,
+
+    rgba(255,236,190,.25),
+
+    transparent 55%);
+
+    z-index:-1;
+
+}
+
+/* ==========================================================
+SECTION SPACING
+========================================================== */
+
+section{
+
+    padding-top:140px;
+
+    padding-bottom:140px;
+
+}
+
+/* ==========================================================
+TYPOGRAPHY
+========================================================== */
+
+.section__title{
+
+    font-size:66px;
+
+    letter-spacing:.3px;
+
+}
+
+.section__small{
+
+    letter-spacing:8px;
+
+    color:#8B8478;
+
+}
+
+p{
+
+    font-weight:300;
+
+}
+
+/* ==========================================================
+INTRO
+========================================================== */
+
+#intro{
+
+    overflow:hidden;
+
+}
+
+/* медленный живой свет */
+
+#intro::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-40%;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(255,255,255,.10),
+
+    transparent 60%);
+
+    animation:
+
+    introLight 18s ease-in-out infinite;
+
+}
+
+/* виньетка */
+
+#intro::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    box-shadow:
+
+    inset 0 0 180px rgba(0,0,0,.35);
+
+}
+
+/* имена */
+
+.intro__title{
+
+    font-size:118px;
+
+    letter-spacing:-2px;
+
+    text-shadow:
+
+    0 6px 25px rgba(0,0,0,.20);
+
+}
+
+/* кнопка */
+
+.intro__button{
+
+    border:1px solid rgba(255,255,255,.18);
+
+    backdrop-filter:blur(6px);
+
+    transition:
+
+    transform .35s,
+
+    background .35s,
+
+    box-shadow .35s;
+
+}
+
+.intro__button:hover{
+
+    background:#d0ab72;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 18px 45px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================================
+HERO
+========================================================== */
+
+.hero{
+
+    overflow:hidden;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at center,
+
+    rgba(255,255,255,.08),
+
+    transparent 70%);
+
+    animation:
+
+    heroLight 25s linear infinite;
+
+}
+
+/* ==========================================================
+CARDS
+========================================================== */
+
+.countdown__item,
+
+.location__card,
+
+.wish__card,
+
+.gallery__item{
+
+    border:1px solid rgba(255,255,255,.55);
+
+    backdrop-filter:blur(12px);
+
+}
+
+/* ==========================================================
+ANIMATIONS
+========================================================== */
+
+@keyframes introLight{
+
+0%{
+
+transform:
+
+translate(-4%,-2%) scale(1);
+
+}
+
+50%{
+
+transform:
+
+translate(4%,2%) scale(1.08);
+
+}
+
+100%{
+
+transform:
+
+translate(-4%,-2%) scale(1);
+
+}
+
+}
+
+@keyframes heroLight{
+
+0%{
+
+transform:translateX(-5%);
+
+}
+
+50%{
+
+transform:translateX(5%);
+
+}
+
+100%{
+
+transform:translateX(-5%);
+
+}
+
+}
+
+/* ==========================================================
+MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+section{
+
+padding-top:100px;
+
+padding-bottom:100px;
+
+}
+
+.intro__title{
+
+font-size:86px;
+
+}
+
+.section__title{
+
+font-size:46px;
+
+}
+
+}
+/* ==========================================================
+LUXURY POLISH
+========================================================== */
+
+/* ---------- Плавный фон сайта ---------- */
+
+body{
+
+    background:
+        radial-gradient(circle at top,
+        #faf8f3 0%,
+        #f4f0e8 45%,
+        #ede8de 100%) !important;
+
+}
+
+/* ---------- Все секции ---------- */
+
+section{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* ---------- Декоративное свечение ---------- */
+
+section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(255,235,190,.18),
+
+    transparent 70%);
+
+    top:-280px;
+
+    right:-250px;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+section>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ==========================================================
+INTRO
+========================================================== */
+
+#intro{
+
+    background:
+
+    radial-gradient(circle at top,
+
+    rgba(255,255,255,.10),
+
+    transparent 35%),
+
+    linear-gradient(
+
+    180deg,
+
+    #5b695f,
+
+    #47554d,
+
+    #39453f) !important;
+
+}
+
+.intro__content{
+
+    animation:
+
+    introFade 2s ease;
+
+}
+
+.intro__subtitle{
+
+    opacity:.85;
+
+    letter-spacing:9px;
+
+}
+
+.intro__title{
+
+    font-size:110px;
+
+    line-height:.9;
+
+}
+
+.intro__button{
+
+    min-width:300px;
+
+    letter-spacing:.6px;
+
+}
+
+/* ==========================================================
+COUNTDOWN
+========================================================== */
+
+.countdown__item{
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    rgba(255,255,255,.95),
+
+    rgba(250,248,244,.95));
+
+    border:1px solid rgba(255,255,255,.7);
+
+}
+
+.countdown__item span{
+
+    text-shadow:
+
+    0 4px 12px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================================
+CARDS
+========================================================== */
+
+.location__card,
+.wish__card,
+.gallery__item{
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    rgba(255,255,255,.98),
+
+    rgba(248,246,242,.98));
+
+}
+
+/* ==========================================================
+BUTTONS
+========================================================== */
+
+button,
+.location__button{
+
+    letter-spacing:.4px;
+
+}
+
+button:hover,
+.location__button:hover{
+
+    transform:
+
+    translateY(-4px)
+
+    scale(1.02);
+
+}
+
+/* ==========================================================
+IMAGES
+========================================================== */
+
+.gallery__item{
+
+    transform-origin:center;
+
+}
+
+.gallery__item:nth-child(1){
+
+    transform:rotate(-2deg);
+
+}
+
+.gallery__item:nth-child(2){
+
+    transform:rotate(1deg);
+
+}
+
+.gallery__item:nth-child(3){
+
+    transform:rotate(-1deg);
+
+}
+
+.gallery__item:nth-child(4){
+
+    transform:rotate(2deg);
+
+}
+
+.gallery__item:nth-child(5){
+
+    transform:rotate(-2deg);
+
+}
+
+.gallery__item:nth-child(6){
+
+    transform:rotate(1deg);
+
+}
+
+.gallery__item:hover{
+
+    transform:
+
+    rotate(0deg)
+
+    translateY(-10px);
+
+}
+
+/* ==========================================================
+FOOTER
+========================================================== */
+
+.footer{
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    #39453f,
+
+    #2e3732);
+
+}
+
+/* ==========================================================
+ANIMATIONS
+========================================================== */
+
+@keyframes introFade{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+/* ==========================================================
+MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+.intro__title{
+
+font-size:78px;
+
+}
+
+.intro__button{
+
+min-width:260px;
+
+}
+
+.countdown__item{
+
+width:140px;
+
+}
+
+}
+/* ==========================================================
+PREMIUM GALLERY
+========================================================== */
+
+.gallery{
+
+    overflow:hidden;
+
+}
+
+.gallery__slider{
+
+    position:relative;
+
+    width:100%;
+
+    margin-top:60px;
+
+}
+
+.gallery__track{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:40px;
+
+    overflow:hidden;
+
+    width:100%;
+
+    min-height:650px;
+
+    position:relative;
+
+}
+
+.gallery__track::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+.gallery__slide{
+
+    flex:0 0 78%;
+
+    scroll-snap-align:center;
+
+    transition:.45s;
+
+}
+
+.gallery__slide img{
+
+    width:100%;
+
+    height:520px;
+
+    object-fit:cover;
+
+    border-radius:28px;
+
+    display:block;
+
+    box-shadow:
+
+    0 35px 70px rgba(0,0,0,.18);
+
+}
+
+.gallery__slide:hover img{
+
+    transform:scale(1.02);
+
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.22);
+
+}
+
+.gallery__arrow{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:56px;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.92);
+
+    color:#37453d;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.15);
+
+    z-index:20;
+
+}
+
+.gallery__arrow:hover{
+
+    background:white;
+
+    transform:translateY(-50%) scale(1.08);
+
+}
+
+.gallery__arrow--left{
+
+    left:0;
+
+}
+
+.gallery__arrow--right{
+
+    right:0;
+
+}
+
+/* Desktop */
+
+@media(min-width:900px){
+
+.gallery__slide{
+
+flex:0 0 42%;
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.gallery__track{
+
+padding:20px;
+
+gap:18px;
+
+}
+
+.gallery__slide{
+
+flex:0 0 88%;
+
+}
+
+.gallery__arrow{
+
+display:none;
+
+}
+
+}
+/* ==========================================================
+APPLE STYLE GALLERY
+========================================================== */
+
+.gallery__track{
+
+    align-items:center;
+
+    scroll-padding:50%;
+
+}
+
+/* Центральная фотография */
+
+.gallery__slide{
+
+    opacity:.55;
+
+    filter:grayscale(.15);
+
+    transform:scale(.88);
+
+    transition:
+
+        transform .45s ease,
+
+        opacity .45s ease,
+
+        filter .45s ease;
+
+}
+
+/* Активный слайд */
+
+.gallery__slide.active{
+
+    opacity:1;
+
+    transform:scale(1.15);
+
+    z-index:30;
+
+}
+
+/* Боковые фотографии */
+
+.gallery__slide img{
+
+    user-select:none;
+
+    pointer-events:auto;
+
+}
+
+/* Мягкая тень */
+
+.gallery__slide.active img{
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.22);
+
+}
+
+/* Затемнение краёв */
+
+.gallery{
+
+    position:relative;
+
+}
+
+.gallery::before,
+
+.gallery::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    bottom:0;
+
+    width:120px;
+
+    z-index:10;
+
+    pointer-events:none;
+
+}
+
+.gallery::before{
+
+    left:0;
+
+    background:
+
+    linear-gradient(
+
+    to right,
+
+    #f7f4ed,
+
+    transparent);
+
+}
+
+.gallery::after{
+
+    right:0;
+
+    background:
+
+    linear-gradient(
+
+    to left,
+
+    #f7f4ed,
+
+    transparent);
+
+}
+
+/* Мобильная версия */
+
+@media(max-width:768px){
+
+.gallery::before,
+
+.gallery::after{
+
+display:none;
+
+}
+
+.gallery__slide{
+
+transform:scale(.95);
+
+opacity:.9;
+
+filter:none;
+
+}
+
+}
+/* ==========================================================
+PREMIUM COVERFLOW GALLERY (Override)
+========================================================== */
+
+.gallery__track{
+
+    display:flex !important;
+
+    justify-content:center !important;
+
+    align-items:center !important;
+
+    gap:40px !important;
+
+    overflow:hidden !important;
+
+    width:100%;
+
+    min-height:650px;
+
+    position:relative;
+
+}
+
+.gallery__slide{
+
+    flex:0 0 320px !important;
+
+    opacity:.45;
+
+    transform:scale(.78);
+
+    transition:all .55s cubic-bezier(.22,.61,.36,1);
+
+}
+
+.gallery__slide.active{
+
+    opacity:1 !important;
+
+    transform:scale(1.15) !important;
+
+    z-index:50;
+
+}
+
+.gallery__slide img{
+
+    width:100%;
+
+    height:520px;
+
+    object-fit:cover;
+
+    border-radius:28px;
+
+    display:block;
+
+    box-shadow:0 35px 70px rgba(0,0,0,.18);
+
+}
+
+.gallery__slide:not(.active) img{
+
+    filter:brightness(.85);
+
+}
+/* ==========================================================
+PREMIUM COVERFLOW
+========================================================== */
+
+.coverflow{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:1300px;
+
+    margin:70px auto 0;
+
+    height:700px;
+
+    overflow:hidden;
+
+}
+
+.coverflow__viewport{
+
+    width:100%;
+
+    height:100%;
+
+    position:relative;
+
+}
+
+.coverflow__track{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+}
+
+.coverflow__slide{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    width:520px;
+
+    aspect-ratio:4/5;
+
+    transform:
+
+        translate(-50%,-50%);
+
+    transition:
+
+        transform .75s cubic-bezier(.22,.61,.36,1),
+
+        opacity .55s,
+
+        filter .55s;
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+.coverflow__slide img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:28px;
+
+    display:block;
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.18);
+
+}
+
+/* центр */
+
+.coverflow__slide.center{
+
+    opacity:1;
+
+    z-index:30;
+
+    transform:
+
+        translate(-50%,-50%)
+
+        scale(1);
+
+}
+
+/* левая */
+
+.coverflow__slide.left{
+
+    opacity:.85;
+
+    z-index:20;
+
+    transform:
+
+        translate(calc(-50% - 340px),-50%)
+
+        scale(.72);
+
+}
+
+/* правая */
+
+.coverflow__slide.right{
+
+    opacity:.85;
+
+    z-index:20;
+
+    transform:
+
+        translate(calc(-50% + 340px),-50%)
+
+        scale(.72);
+
+}
+
+/* остальные */
+
+.coverflow__slide:not(.center):not(.left):not(.right){
+
+    opacity:0;
+
+    transform:
+
+        translate(-50%,-50%)
+
+        scale(.55);
+
+}
+
+.coverflow__dots{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:14px;
+
+    margin-top:30px;
+
+}
+
+.coverflow__dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:#d8d2c8;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.coverflow__dot.active{
+
+    background:#C8A062;
+
+    transform:scale(1.35);
+
+}
+
+.coverflow__arrow{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+
+    z-index:40;
+
+    cursor:pointer;
+
+    font-size:28px;
+
+}
+
+.coverflow__prev{
+
+    left:25px;
+
+}
+
+.coverflow__next{
+
+    right:25px;
+
+}
+
+@media(max-width:768px){
+
+    .coverflow{
+
+        height:500px;
+
+    }
+
+    .coverflow__slide{
+
+        width:78vw;
+
+    }
+
+    .coverflow__slide.left{
+
+        transform:
+
+            translate(calc(-50% - 150px),-50%)
+
+            scale(.82);
+
+    }
+
+    .coverflow__slide.right{
+
+        transform:
+
+            translate(calc(-50% + 150px),-50%)
+
+            scale(.82);
+
+    }
+
+    .coverflow__arrow{
+
+        display:none;
+
+    }
+
+}
+/* ==========================================================
+COVERFLOW POLISH
+========================================================== */
+
+.coverflow__slide{
+
+    cursor:pointer;
+
+}
+
+.coverflow__slide img{
+
+    transition:
+
+        transform .45s ease,
+
+        box-shadow .45s ease;
+
+}
+
+.coverflow__slide.center:hover img{
+
+    transform:scale(1.02);
+
+    box-shadow:
+
+        0 40px 90px rgba(0,0,0,.22);
+
+}
+
+.coverflow__arrow{
+
+    transition:
+
+        transform .25s ease,
+
+        background .25s ease,
+
+        box-shadow .25s ease;
+
+}
+
+.coverflow__arrow:hover{
+
+    transform:
+
+        translateY(-50%)
+
+        scale(1.08);
+
+    background:#ffffff;
+
+}
+
+.coverflow__arrow:active{
+
+    transform:
+
+        translateY(-50%)
+
+        scale(.96);
+
+}

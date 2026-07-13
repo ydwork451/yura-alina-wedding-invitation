@@ -1,0 +1,1356 @@
+/* ==========================================================
+   PREMIUM WEDDING DESIGN V2
+   Foundation
+   Yura & Alina
+========================================================== */
+
+/* ==========================================================
+   GLOBAL PALETTE
+========================================================== */
+
+:root{
+
+    --paper:#F7F3EC;
+    --paper-light:#FCFAF6;
+    --paper-dark:#EFE8DD;
+
+    --forest:#536257;
+    --forest-dark:#38433D;
+
+    --gold:#C7A169;
+    --gold-soft:#D8BC91;
+
+    --text:#48453F;
+    --text-light:#7B766E;
+
+    --shadow:
+        0 25px 70px rgba(0,0,0,.10);
+
+    --radius:28px;
+
+}
+
+/* ==========================================================
+BODY
+========================================================== */
+
+body{
+
+    background:
+        linear-gradient(
+        180deg,
+        #faf8f3 0%,
+        #f5f1ea 40%,
+        #efe8de 100%) !important;
+
+    color:var(--text);
+
+    position:relative;
+
+}
+
+/* бумажная текстура */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.03;
+
+    background-image:
+
+        radial-gradient(circle,#000 .6px,transparent .7px);
+
+    background-size:13px 13px;
+
+    z-index:-2;
+
+}
+
+/* теплый свет */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+
+        radial-gradient(
+
+        circle at 50% -10%,
+
+        rgba(255,236,190,.26),
+
+        transparent 60%);
+
+    z-index:-1;
+
+}
+
+/* ==========================================================
+SECTION
+========================================================== */
+
+section{
+
+    position:relative;
+
+    padding:140px 0;
+
+    overflow:hidden;
+
+}
+
+section>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* декоративное свечение */
+
+section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    top:-340px;
+
+    right:-260px;
+
+    background:
+
+        radial-gradient(
+
+        circle,
+
+        rgba(255,240,205,.20),
+
+        transparent 70%);
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+TYPOGRAPHY
+========================================================== */
+
+.section__small{
+
+    color:#948978;
+
+    font-size:13px;
+
+    letter-spacing:8px;
+
+    text-transform:uppercase;
+
+}
+
+.section__title{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:72px;
+
+    line-height:1.05;
+
+    font-weight:500;
+
+    color:var(--forest-dark);
+
+    margin-top:12px;
+
+}
+
+.section__divider{
+
+    width:300px;
+
+    height:90px;
+
+    margin:18px auto 36px;
+
+    background:url("../assets/img/divider-small.png") center center no-repeat;
+
+    background-size:300px auto;
+
+}
+
+p{
+
+    font-weight:300;
+
+    color:var(--text);
+
+    line-height:1.9;
+
+}
+
+/* ==========================================================
+PREMIUM INTRO
+========================================================== */
+
+#intro{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+
+        circle at top,
+
+        rgba(255,255,255,.08),
+
+        transparent 35%),
+
+        linear-gradient(
+
+        180deg,
+
+        #66756B,
+
+        #4C5A52,
+
+        #39443E);
+
+}
+
+/* бумага */
+
+.intro__paper{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.04;
+
+    background-image:
+
+        radial-gradient(circle,#fff .7px,transparent .8px);
+
+    background-size:18px 18px;
+
+}
+
+/* живой свет */
+
+.intro__light{
+
+    position:absolute;
+
+    width:1200px;
+
+    height:1200px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+        circle,
+
+        rgba(255,236,195,.18),
+
+        transparent 65%);
+
+    animation:introLight 18s ease-in-out infinite;
+
+}
+
+/* виньетка */
+
+.intro__vignette{
+
+    position:absolute;
+
+    inset:0;
+
+    box-shadow:
+
+        inset 0 0 220px rgba(0,0,0,.38);
+
+}
+
+/* декоративные частицы */
+
+.intro__particles{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.07;
+
+    background-image:
+
+        radial-gradient(circle,#fff .8px,transparent .9px);
+
+    background-size:120px 120px;
+
+}
+
+.intro__content{
+
+    position:relative;
+
+    text-align:center;
+
+    color:white;
+
+    z-index:10;
+
+    width:min(92%,760px);
+
+}
+.intro__content p,
+.intro__content span,
+.intro__content h1{
+
+    color:#ffffff;
+
+}
+
+.intro__small{
+
+    display:block;
+
+    letter-spacing:9px;
+
+    text-transform:uppercase;
+
+    font-size:13px;
+
+    opacity:.88;
+
+}
+
+.intro__gold-line{
+
+    width:110px;
+
+    height:2px;
+
+    margin:34px auto;
+
+    background:var(--gold);
+
+}
+
+.intro__title{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:118px;
+
+    line-height:.9;
+
+    font-weight:500;
+
+    text-shadow:
+
+        0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.intro__name{
+
+    display:block;
+
+}
+
+.intro__and{
+
+    display:block;
+
+    color:var(--gold);
+
+    margin:14px 0;
+
+    font-size:.8em;
+
+}
+
+.intro__date{
+
+    margin-top:42px;
+
+    letter-spacing:4px;
+
+    font-size:22px;
+
+    color:#ffffff;
+
+    opacity:.92;
+
+    text-shadow:
+        0 2px 12px rgba(0,0,0,.35);
+
+}
+
+.intro__divider{
+
+    width:180px;
+
+    height:1px;
+
+    margin:46px auto;
+
+    background:rgba(255,255,255,.25);
+
+}
+
+.intro__button{
+
+    padding:20px 54px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:rgba(199,161,105,.95);
+
+    color:white;
+
+    font-size:17px;
+
+    backdrop-filter:blur(8px);
+
+    transition:.35s;
+
+    box-shadow:
+
+        0 20px 40px rgba(0,0,0,.25);
+
+}
+
+.intro__button:hover{
+
+    transform:translateY(-4px);
+
+    background:#d3ac73;
+
+}
+
+.intro__ornament{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:rgba(255,255,255,.22);
+
+    font-size:44px;
+
+    letter-spacing:10px;
+
+}
+
+.intro__ornament--top{
+
+    top:60px;
+
+}
+
+.intro__ornament--bottom{
+
+    bottom:60px;
+
+}
+
+/* ==========================================================
+ANIMATIONS
+========================================================== */
+
+@keyframes introLight{
+
+    0%{
+
+        transform:
+            translate(-5%,-4%)
+            scale(1);
+
+    }
+
+    50%{
+
+        transform:
+            translate(5%,4%)
+            scale(1.08);
+
+    }
+
+    100%{
+
+        transform:
+            translate(-5%,-4%)
+            scale(1);
+
+    }
+
+}
+
+/* ==========================================================
+MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+    section{
+
+        padding:100px 0;
+
+    }
+
+    .section__title{
+
+        font-size:48px;
+
+    }
+
+    .intro__title{
+
+        font-size:82px;
+
+    }
+
+    .intro__button{
+
+        width:100%;
+
+        max-width:300px;
+
+    }
+
+}
+/* ==========================================================
+   PREMIUM HERO V2
+========================================================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(40,48,44,.42),
+        rgba(40,48,44,.42)
+    ),
+    url("../assets/img/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center center;
+
+    background-attachment:fixed;
+
+}
+
+/* тёплая дымка */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+
+        circle at top,
+
+        rgba(255,240,210,.18),
+
+        transparent 60%);
+
+    animation:heroGlow 16s ease-in-out infinite;
+
+}
+
+/* виньетка */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    box-shadow:
+
+        inset 0 0 240px rgba(0,0,0,.28);
+
+}
+
+/* контент */
+
+.hero__content{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:90px;
+
+    transform:translateX(-50%);
+
+    width:min(90%,900px);
+
+    text-align:center;
+
+    color:white;
+
+    z-index:20;
+
+}
+
+/* маленький текст */
+
+.hero__subtitle{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 26px;
+
+    margin-bottom:32px;
+
+    border:1px solid rgba(199,161,105,.45);
+
+    border-radius:999px;
+
+    background:rgba(20,24,22,.32);
+
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+
+    color:#ffffff;
+
+    font-size:12px;
+
+    font-weight:500;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.20),
+        inset 0 1px 0 rgba(255,255,255,.08);
+
+}
+
+/* золотая линия */
+
+
+
+/* имена */
+
+.hero__title{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:86px;
+
+    line-height:.9;
+
+    font-weight:500;
+
+    color:white;
+
+    text-shadow:
+
+        0 8px 25px rgba(0,0,0,.45);
+
+}
+
+.hero__title span{
+
+    color:var(--gold);
+
+}
+
+/* дата */
+
+.hero__date{
+
+    color:#E6D1A5;
+
+    letter-spacing:6px;
+
+    margin-top:26px;
+
+    font-size:20px;
+
+}
+
+/* стрелка */
+
+.hero__scroll{
+
+    margin-top:90px;
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+    backdrop-filter:blur(10px);
+
+    background:rgba(255,255,255,.05);
+
+    transition:.35s;
+
+}
+
+.hero__scroll:hover{
+
+    transform:
+
+        translateY(6px);
+
+    background:
+
+        rgba(255,255,255,.14);
+
+}
+
+
+
+/* ==========================================================
+HERO ANIMATION
+========================================================== */
+
+@keyframes heroGlow{
+
+0%{
+
+transform:
+
+translateX(-4%)
+
+scale(1);
+
+}
+
+50%{
+
+transform:
+
+translateX(4%)
+
+scale(1.08);
+
+}
+
+100%{
+
+transform:
+
+translateX(-4%)
+
+scale(1);
+
+}
+
+}
+
+/* ==========================================================
+RESPONSIVE
+========================================================== */
+
+@media(max-width:900px){
+
+.hero{
+
+background-attachment:scroll;
+
+}
+
+.hero__title{
+
+font-size:74px;
+
+}
+
+.hero__content::before{
+
+left:-20px;
+
+right:-20px;
+
+top:-30px;
+
+bottom:-30px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+min-height:90vh;
+
+}
+
+.hero__title{
+
+font-size:62px;
+
+}
+
+.hero__date{
+
+font-size:18px;
+
+letter-spacing:3px;
+
+}
+
+.hero__scroll{
+
+width:60px;
+
+height:60px;
+
+margin-top:60px;
+
+}
+
+}
+/* ==========================================================
+   HERO IMAGE
+========================================================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:none;
+
+}
+
+/* ========================================================== */
+
+.hero__image{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+/* ========================================================== */
+
+.hero__image img{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center 100%;
+
+    transform:scale(1.06);
+
+    animation:
+
+        heroZoom 28s ease-in-out infinite alternate;
+
+}
+
+/* ========================================================== */
+
+.hero__overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            rgba(14,18,16,.15) 0%,
+
+            rgba(18,22,20,.32) 40%,
+
+            rgba(18,22,20,.62) 100%
+
+        );
+
+}
+
+/* ========================================================== */
+
+@keyframes heroZoom{
+
+    from{
+
+        transform:
+
+            scale(1.06);
+
+    }
+
+    to{
+
+        transform:
+
+            scale(1.14);
+
+    }
+
+}
+/* ==========================================
+   LOCATION MAP
+========================================== */
+
+.location__card{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    overflow:hidden;
+
+}
+
+.location__photo{
+
+    min-height:480px;
+
+    overflow:hidden;
+
+    background:#eee;
+
+}
+
+.location__photo iframe{
+
+    width:100%;
+
+    height:100%;
+
+    border:0;
+
+    display:block;
+
+}
+
+.location__info{
+
+    padding:70px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+@media(max-width:900px){
+
+    .location__card{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .location__photo{
+
+        min-height:320px;
+
+    }
+
+}
+/* ==========================================================
+RSVP PREMIUM
+========================================================== */
+
+.rsvp{
+
+    background:#EEF2EC;
+
+}
+
+.rsvp__subtitle{
+
+    max-width:620px;
+
+    margin:0 auto 50px;
+
+    text-align:center;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+.rsvp__form{
+
+    max-width:720px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+.rsvp__form input,
+.rsvp__form select,
+.rsvp__form textarea{
+
+    width:100%;
+
+    padding:22px 26px;
+
+    border:none;
+
+    border-radius:22px;
+
+    background:white;
+
+    font-size:17px;
+
+    font-family:inherit;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.rsvp__form input:focus,
+.rsvp__form select:focus,
+.rsvp__form textarea:focus{
+
+    box-shadow:
+        0 0 0 2px rgba(199,161,105,.35),
+        0 12px 35px rgba(0,0,0,.10);
+
+}
+
+.rsvp__form textarea{
+
+    resize:vertical;
+
+}
+
+.rsvp__form button{
+
+    padding:22px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:var(--gold);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+}
+
+.rsvp__form button:hover{
+
+    transform:translateY(-3px);
+
+    background:#d0ab72;
+
+}
+
+@media(max-width:768px){
+
+    .rsvp__subtitle{
+
+        font-size:18px;
+
+    }
+
+}
+/* =========================
+
+FALLING PETALS
+
+========================= */
+
+.falling{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+.flower{
+
+    position:absolute;
+
+    top:-120px;
+
+    user-select:none;
+
+    will-change:transform;
+
+    pointer-events:none;
+
+    filter:
+
+        drop-shadow(0 10px 18px rgba(0,0,0,.12));
+
+    animation:
+
+        flowerFall linear infinite,
+
+        flowerFloat ease-in-out infinite;
+
+}
+
+@keyframes flowerFall{
+
+    from{
+
+        transform:
+            translate3d(0,-150px,0)
+            rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+            translate3d(var(--drift),120vh,0)
+            rotate(var(--rotate));
+
+    }
+
+}
+@keyframes flowerFloat{
+
+    0%{
+
+        margin-left:0;
+
+    }
+
+    25%{
+
+        margin-left:-18px;
+
+    }
+
+    50%{
+
+        margin-left:18px;
+
+    }
+
+    75%{
+
+        margin-left:-10px;
+
+    }
+
+    100%{
+
+        margin-left:0;
+
+    }
+
+}
+
+/* ==========================================
+   BIG FLORAL DIVIDER
+========================================== */
+
+.section-divider{
+
+    width:100%;
+
+    height:90px;
+
+    margin:30px auto;
+
+    background:url("../assets/img/divider-large.png") center center no-repeat;
+
+    background-size:520px auto;
+
+    opacity:.95;
+
+}
+/* ===================================
+   HERO LAYOUT
+=================================== */
+
+/* Капсула */
+
+.hero__subtitle{
+
+    margin-bottom:0px;
+
+    font-size:14px;
+
+}
+
+/* Имя */
+
+.hero__title{
+
+    font-size:82px;
+
+    line-height:.9;
+
+    margin-bottom:8px;
+
+}
+
+/* Разделитель */
+
+.hero__divider{
+
+    width:170px;
+
+    height:52px;
+
+    margin:6px auto;
+
+    background:url("../assets/img/divider-small.png") center center no-repeat;
+
+    background-size:170px auto;
+
+}
+
+/* Дата */
+
+.hero__date{
+
+    margin-top:8px;
+
+    margin-bottom:32px;
+
+    font-size:18px;
+
+}
+
+/* Стрелка */
+
+.hero__scroll{
+
+    margin-top:18px;
+
+}
