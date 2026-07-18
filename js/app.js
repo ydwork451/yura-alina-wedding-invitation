@@ -505,3 +505,57 @@ behavior:"smooth"
     });
 
 })();
+/* ==========================================
+   MUSIC BUTTON OVERRIDE
+   (добавить в самый конец app.js)
+========================================== */
+
+window.addEventListener("load", () => {
+
+    const music = document.getElementById("bgMusic");
+    const button = document.getElementById("musicToggle");
+
+    if (!music || !button) return;
+
+    // Удаляем старую кнопку и создаем новую,
+    // чтобы убрать все старые обработчики событий
+    const newButton = button.cloneNode(true);
+    button.parentNode.replaceChild(newButton, button);
+
+    newButton.textContent = music.paused ? "♪" : "🔊";
+
+    newButton.addEventListener("click", async () => {
+
+        if (music.paused) {
+
+            try {
+
+                music.volume = 0.35;
+
+                await music.play();
+
+                newButton.innerHTML = `
+<div class="music-eq">
+<span></span>
+<span></span>
+<span></span>
+</div>
+`;
+
+            } catch (err) {
+
+                console.error(err);
+
+            }
+
+        } else {
+
+            music.pause();
+
+            newButton.textContent = "♪";
+
+        }
+
+    });
+
+});
