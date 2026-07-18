@@ -942,9 +942,39 @@ margin-top:60px;
 
     transform:scale(1.06);
 
-    animation:
+    animation:heroZoom 28s ease-in-out infinite alternate;
 
-        heroZoom 28s ease-in-out infinite alternate;
+}
+
+/* По умолчанию */
+
+.hero__image .desktop-hero{
+
+    display:block;
+
+}
+
+.hero__image .mobile-hero{
+
+    display:none;
+
+}
+
+/* Телефон */
+
+@media (max-width:768px){
+
+    .hero__image .desktop-hero{
+
+        display:none;
+
+    }
+
+    .hero__image .mobile-hero{
+
+        display:block;
+
+    }
 
 }
 
@@ -1352,5 +1382,88 @@ FALLING PETALS
 .hero__scroll{
 
     margin-top:18px;
+
+}
+/* ==========================================
+   MUSIC EQUALIZER
+========================================== */
+
+.music-eq{
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:2px;
+
+    width:18px;
+    height:18px;
+
+    margin:auto;
+
+}
+
+.music-eq span{
+
+    width:3px;
+    border-radius:3px;
+
+    background:#fff;
+
+    animation:eq .9s infinite ease-in-out;
+
+}
+
+.music-eq span:nth-child(1){
+
+    height:6px;
+    animation-delay:0s;
+
+}
+
+.music-eq span:nth-child(2){
+
+    height:12px;
+    animation-delay:.2s;
+
+}
+
+.music-eq span:nth-child(3){
+
+    height:8px;
+    animation-delay:.4s;
+
+}
+
+@keyframes eq{
+
+0%{
+
+transform:scaleY(.4);
+
+}
+
+25%{
+
+transform:scaleY(1);
+
+}
+
+50%{
+
+transform:scaleY(.6);
+
+}
+
+75%{
+
+transform:scaleY(1.2);
+
+}
+
+100%{
+
+transform:scaleY(.4);
+
+}
 
 }
